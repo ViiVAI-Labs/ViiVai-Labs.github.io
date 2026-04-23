@@ -374,6 +374,23 @@ main {
   font-size: 1.2rem;
 }
 
+.algorithm-card-media {
+  overflow: hidden;
+}
+
+.algorithm-figure {
+  margin: -22px -22px 18px;
+  border-bottom: 1px solid rgba(115, 248, 154, 0.14);
+  background: #09110d;
+}
+
+.algorithm-figure img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
 .product-figure {
   margin: 0 0 18px;
   border-radius: 18px;

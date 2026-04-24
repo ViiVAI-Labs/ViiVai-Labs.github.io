@@ -447,7 +447,8 @@ main {
 
 .feature-grid,
 .hardware-grid,
-.algorithm-grid {
+.algorithm-grid,
+.media-grid {
   display: grid;
 }
 
@@ -463,10 +464,46 @@ main {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.media-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  margin-inline: -4px;
+  padding-inline: 4px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(173, 255, 157, 0.45) rgba(255, 255, 255, 0.05);
+}
+
+.media-grid::-webkit-scrollbar {
+  height: 10px;
+}
+
+.media-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+}
+
+.media-grid::-webkit-scrollbar-thumb {
+  background: rgba(173, 255, 157, 0.45);
+  border-radius: 999px;
+}
+
+.carousel-hint {
+  margin: -8px 0 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  gap: 16px;
+}
+
 .feature-card,
 .hardware-card,
 .algorithm-card,
 .info-card,
+.media-card,
 .founder-card {
   padding: 22px;
 }
@@ -478,6 +515,64 @@ main {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1.2rem;
+}
+
+.media-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 0 0 min(380px, 78vw);
+  border: 1px solid var(--panel-border);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  scroll-snap-align: start;
+}
+
+.media-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(173, 255, 157, 0.34);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 18px 40px rgba(2, 16, 10, 0.18);
+}
+
+.media-icon {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  overflow: hidden;
+  padding: 6px;
+  box-shadow: 0 10px 24px rgba(57, 191, 70, 0.16);
+}
+
+.media-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.media-copy {
+  min-width: 0;
+}
+
+.media-copy strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.media-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .algorithm-card-media {
@@ -786,7 +881,12 @@ main {
 
   .feature-grid,
   .hardware-grid,
-  .algorithm-grid {
+  .algorithm-grid,
+  .media-grid {
     grid-template-columns: 1fr;
+  }
+
+  .media-card {
+    flex-basis: 86vw;
   }
 }

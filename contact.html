@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | ViiVAI Labs</title>
+  <meta name="description" content="Contact ViiVAI Labs for partnerships, product inquiries, and R&D collaboration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ViiVAI Labs home">
+        <img src="logo.png" alt="ViiVAI Labs logo">
+        <div>
+          <span>ViiVAI Labs and Studio</span>
+          <small>Enhancing Touch, Extending Perception</small>
+        </div>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="software-development.html">Software Development</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero panel">
+        <p class="eyebrow">Contact Us</p>
+        <h1>Start a conversation about digital touch.</h1>
+        <p class="page-intro">
+          Reach out for partnerships, product development, pilot programs, research collaboration, or R&amp;D consulting.
+        </p>
+      </section>
+
+      <section class="panel contact-layout">
+        <div class="contact-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Message</p>
+            <h2>Send us a note</h2>
+            <p>Messages from this form will be routed to `mail2aliisrar@gmail.com` using a static-site form backend.</p>
+          </div>
+          <div class="contact-success" data-contact-success hidden>
+            Your message was sent. We will get back to you soon.
+          </div>
+          <form class="contact-form" action="https://formsubmit.co/mail2aliisrar@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New ViiVAI Labs contact form submission">
+            <input type="hidden" name="_next" value="contact.html?submitted=1">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
+
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="7" placeholder="Tell us about your project, partnership, or inquiry." required></textarea>
+            </label>
+
+            <button class="button button-primary" type="submit">Send message</button>
+          </form>
+          <p class="contact-note">
+            On the first live submission, FormSubmit asks for email confirmation before forwarding future messages.
+          </p>
+        </div>
+
+        <aside class="contact-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Location</p>
+            <h2>Seattle</h2>
+            <p>Regional base for collaboration, demos, and partner conversations.</p>
+          </div>
+          <div class="map-frame">
+            <iframe
+              title="Seattle map"
+              src="https://www.google.com/maps?q=Seattle,+WA&z=11&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>ViiVAI Labs</strong>
+        <p>Infrastructure for spatial haptic intelligence and product innovation.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="software-development.html">Software Development</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="visitor-badge" aria-live="polite">
+        <span class="visitor-label">Visits</span>
+        <strong data-visitor-count>Loading...</strong>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

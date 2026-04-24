@@ -812,6 +812,120 @@ main {
   color: var(--text);
 }
 
+.visitor-badge {
+  min-width: 110px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--panel-border);
+  background: rgba(255, 255, 255, 0.04);
+  text-align: center;
+}
+
+.visitor-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 6px;
+}
+
+.visitor-badge strong {
+  display: block;
+  color: var(--accent-soft);
+  font-size: 1.2rem;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  gap: 24px;
+}
+
+.contact-panel {
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  padding: 24px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-form span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  background: rgba(7, 18, 12, 0.55);
+  color: var(--text);
+  padding: 14px 16px;
+  font: inherit;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(173, 255, 157, 0.42);
+  box-shadow: 0 0 0 4px rgba(173, 255, 157, 0.08);
+}
+
+.hidden-field {
+  display: none;
+}
+
+.contact-note {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 16px 0 0;
+}
+
+.contact-success {
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(173, 255, 157, 0.26);
+  background: rgba(173, 255, 157, 0.1);
+  color: #efffce;
+  font-weight: 600;
+}
+
+.map-frame {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(173, 255, 157, 0.18);
+  min-height: 420px;
+  background: #0d1711;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 0;
+  display: block;
+}
+
 @media (max-width: 980px) {
   .hero,
   .split-panel,
@@ -819,6 +933,7 @@ main {
   .hardware-grid,
   .algorithm-grid,
   .two-column-grid,
+  .contact-layout,
   .founder-card,
   .site-footer {
     grid-template-columns: 1fr;
@@ -888,5 +1003,14 @@ main {
 
   .media-card {
     flex-basis: 86vw;
+  }
+
+  .visitor-badge {
+    width: 100%;
+  }
+
+  .map-frame,
+  .map-frame iframe {
+    min-height: 320px;
   }
 }

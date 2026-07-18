@@ -176,6 +176,11 @@ main {
   z-index: 1;
 }
 
+.profile-links {
+    display: flex;
+    gap: 20px;    /* Adjust spacing as needed */
+}
+
 .hero,
 .split-panel,
 .two-column-grid {
